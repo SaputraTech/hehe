@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stok Habis - CloudNest Store</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* Variabel Desain untuk Konsistensi */
+        :root {
+            --bg-color: #12121f;
+            --card-color: #1e1e2f;
+            --primary-color: #3a86ff;
+            --secondary-color: #ffbe0b;
+            --text-color: #e0e0e0;
+            --text-muted: #888;
+            --font-family: 'Poppins', sans-serif;
+        }
+
+        /* Reset dan Pengaturan Dasar Body */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.6;
+            /* Flexbox untuk menengahkan konten secara vertikal dan horizontal */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Kontainer Utama */
+        .main-container {
+            text-align: center;
+            max-width: 600px;
+            padding: 40px;
+            background-color: var(--card-color);
+            border-radius: 16px;
+            border: 1px solid #333;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Ilustrasi SVG */
+        .illustration-svg {
+            width: 120px;
+            margin-bottom: 30px;
+        }
+
+        .illustration-svg path {
+            stroke: var(--primary-color);
+            stroke-width: 8;
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        /* Tipografi */
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+        }
+
+        p {
+            font-size: 1.1rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+            max-width: 450px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        /* Tombol Call-to-Action */
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap; /* Agar tombol tidak berantakan di layar kecil */
+        }
+
+        .cta-buttons a {
+            text-decoration: none;
+            font-family: var(--font-family);
+            font-weight: 600;
+            padding: 12px 25px;
+            border-radius: 8px;
+            transition: transform 0.2s ease, background-color 0.2s ease;
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            transform: translateY(-3px);
+        }
+
+        .btn-secondary {
+            background-color: transparent;
+            color: var(--text-color);
+            border: 2px solid var(--text-muted);
+        }
+
+        .btn-secondary:hover {
+            background-color: var(--text-muted);
+            color: var(--card-color);
+            transform: translateY(-3px);
+        }
+
+        /* Penyesuaian untuk layar kecil */
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 2rem;
+            }
+            p {
+                font-size: 1rem;
+            }
+            .main-container {
+                padding: 30px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="main-container">
+        <svg class="illustration-svg" viewBox="0 0 128 128">
+            <path d="M16,40 L16,104 C16,112.83 23.17,120 32,120 L96,120 C104.83,120 112,112.83 112,104 L112,40 M16,40 L64,8 L112,40 M16,40 L112,40 M44,64 L84,64 M44,88 L84,88"/>
+        </svg>
+
+        <h1>Oops! Stok Kosong</h1>
+        <p>
+            Mohon maaf, produk yang Anda cari saat ini sudah habis terjual atau tidak tersedia. Silakan periksa kembali lain waktu.
+        </p>
+        <div class="cta-buttons">
+            <a href="index.html" class="btn-primary">Kembali ke Beranda</a>
+            <a href="https://t.me/SaputraTech" target="_blank" class="btn-secondary">Hubungi Kami</a>
+        </div>
+    </div>
+
+</body>
+</html>
