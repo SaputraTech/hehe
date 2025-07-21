@@ -1,0 +1,194 @@
+/* Import Font & Reset CSS */
+:root {
+    --bg-color: #12121f;
+    --card-color: #1e1e2f;
+    --primary-color: #3a86ff;
+    --secondary-color: #ffbe0b;
+    --text-color: #e0e0e0;
+    --text-muted: #888;
+    --font-family: 'Poppins', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    text-align: center;
+    padding: 40px 20px 20px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: var(--primary-color);
+}
+
+header p {
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* Main Content & Product Grid */
+main {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+        .buy-button1 {
+            background-color: var(--primary-color);
+            color: #000;
+            text-decoration: none;
+            padding: 15px 30px;
+            text-align: center;
+            border-radius: 5px;
+            font-weight: 700;
+            display: inline-block;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .buy-button1:hover {
+            background-color: #ffffff;
+        }
+        
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+/* Product Card Styling */
+.product-card {
+    background-color: var(--card-color);
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #333;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+}
+
+.product-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    color: var(--primary-color);
+}
+
+.product-features {
+    list-style: none;
+    margin-bottom: 20px;
+    flex-grow: 1; /* Pushes price and button to the bottom */
+}
+
+.product-features li {
+    margin-bottom: 8px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.product-features li::before {
+    content: '✓';
+    color: var(--primary-color);
+    position: absolute;
+    left: 0;
+    font-weight: bold;
+}
+
+.product-price {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.buy-btn {
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: var(--font-family);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+}
+
+.buy-btn:hover {
+    background-color: #0056b3;
+}
+
+/* Badges for Featured/Limited Items */
+.badge {
+    position: absolute;
+    top: 15px;
+    right: -30px;
+    background-color: var(--secondary-color);
+    color: #12121f;
+    padding: 5px 30px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    transform: rotate(45deg);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+.product-card.limited .badge {
+    background-color: #ff4d4d; /* Red for limited */
+}
+
+.product-card.available .badge {
+    background-color: #43a047; /* Green for Available */
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid #333;
+    margin-top: 40px;
+}
+
+.notice {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.contact-btn {
+    display: inline-block;
+    background-color: #25D366; /* Telegram Green */
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    border-radius: 50px;
+    font-weight: 600;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.contact-btn:hover {
+    transform: scale(1.05);
+    background-color: #128C7E;
+}
