@@ -4,45 +4,97 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Paket VPN</title>
-    <link rel="stylesheet" href="style.css"> <style>
-        /* Tambahan CSS khusus untuk halaman penjualan */
+    <style>
+        /* Contoh variabel warna, sesuaikan dengan file style.css Anda */
+        :root {
+            --card-color: #ffffff;
+            --border-color: #e0e0e0;
+            --primary-color: #00e676;
+            --secondary-text: #666;
+            --body-bg-color: #f4f6f9;
+            --text-primary-color: #333;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: var(--body-bg-color);
+            color: var(--text-primary-color);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.2em;
+            margin-bottom: 0;
+        }
+        header h2 {
+            font-size: 1.4em;
+            font-weight: 400;
+            color: var(--secondary-text);
+            margin-top: 5px;
+        }
+
+        /* --- GRID UTAMA UNTUK SEMUA KARTU --- */
         .pricing-grid {
             display: grid;
+            /* Ini adalah kunci agar layout responsif */
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
+            gap: 24px;
             margin-top: 40px;
         }
 
         .pricing-card {
             background-color: var(--card-color);
             border: 1px solid var(--border-color);
-            border-radius: 10px;
+            border-radius: 12px;
             padding: 30px;
             text-align: center;
             transition: transform 0.3s, box-shadow 0.3s;
+            /* Menggunakan flexbox agar tombol selalu di bawah */
+            display: flex;
+            flex-direction: column;
         }
 
         .pricing-card:hover {
             transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+            box-shadow: 0 12px 24px rgba(0,0,0,0.08);
         }
 
         .pricing-card h3 {
-            font-size: 1.5em;
+            font-size: 1.2em;
+            margin-top: 0;
             margin-bottom: 10px;
+            color: var(--secondary-text);
         }
 
+        /* Wrapper untuk konten agar tombol bisa didorong ke bawah */
+        .card-content {
+            flex-grow: 1; /* Membuat bagian ini mengisi ruang kosong */
+        }
+        
         .price {
-            font-size: 2.5em;
+            font-size: 1.8em;
             font-weight: 700;
             color: var(--primary-color);
-            margin: 20px 0;
+            margin: 0 0 20px 0;
+        }
+        
+        .price span {
+            font-size: 0.8em;
+            color: var(--text-primary-color);
+            font-weight: 500;
         }
 
-        .price span {
-            font-size: 0.5em;
-            font-weight: 400;
-            color: var(--secondary-text);
+        .features-header {
+            font-weight: bold;
+            text-align: left;
+            margin-bottom: 15px;
         }
 
         .features {
@@ -56,6 +108,7 @@
             margin-bottom: 12px;
             padding-left: 25px;
             position: relative;
+            color: var(--secondary-text);
         }
         
         .features li::before {
@@ -71,134 +124,140 @@
             color: #000;
             text-decoration: none;
             padding: 15px 30px;
-            border-radius: 5px;
+            border-radius: 8px;
             font-weight: 700;
             display: inline-block;
-            margin-top: 20px;
-            transition: background-color 0.3s;
+            margin-top: 20px; /* Jarak dari konten di atasnya */
+            transition: background-color 0.3s, transform 0.2s;
         }
 
         .buy-button:hover {
-            background-color: #00bfa5;
+            background-color: #00c853;
+            transform: scale(1.05);
         }
+
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>SKARTI STORE </h1>
-            <h1>Pilih Paket VPN Terbaik Anda</h1>
+            <h1>SKARTI STORE</h1>
+            <h2>Pilih Paket VPN Terbaik Anda</h2>
         </header>
 
         <div class="pricing-grid">
+            
             <div class="pricing-card">
-                <h3>SSH WS Only</h3>
-                <div class="price">ID TENCENT<span> V1</span></div>
-                <ul class="features">
-                   <h3>• STOK AVAILABLE : 28 / 30 
-                    <br>- PRICE VPN :</h3>
-                    <li>Rp 5.000 / 15 Day</li>
-                    <li>Rp 10.000 / 30 Day</li>
-                    <li>Rp 15.000 / 60 Day</li>
-                    <li>Rp 25.000 / 90 Day</li>
-                    <li>Rp 115.000 / 365 Day</li>
-                </ul>
+                <div class="card-content">
+                    <h3>SSH WS Only</h3>
+                    <div class="price"><span>ID TENCENT</span> V1</div>
+                    <p class="features-header">• STOK AVAILABLE : 28 / 30<br>- PRICE VPN :</p>
+                    <ul class="features">
+                        <li>Rp 5.000 / 15 Hari</li>
+                        <li>Rp 10.000 / 30 Hari</li>
+                        <li>Rp 15.000 / 60 Hari</li>
+                        <li>Rp 25.000 / 90 Hari</li>
+                        <li>Rp 115.000 / 365 Hari</li>
+                    </ul>
+                </div>
                 <a href="https://t.me/SaputraTech" class="buy-button">Beli Sekarang</a>
             </div>
             
-        <div class="pricing-grid">
             <div class="pricing-card">
-                <h3>SSH WS Only</h3>
-                <div class="price">SG DO REGULER<span> V2</span></div>
-                <ul class="features">
-                   <h3>• STOK AVAILABLE : 46 / 75
-                    <br>- PRICE VPN :</h3>
-                    <li>Rp 5.000 / 15 Day</li>
-                    <li>Rp 10.000 / 30 Day</li>
-                    <li>Rp 15.000 / 60 Day</li>
-                    <li>Rp 25.000 / 90 Day</li>
-                    <li>Rp 115.000 / 365 Day</li>
-                </ul>
+                <div class="card-content">
+                    <h3>SSH WS Only</h3>
+                    <div class="price"><span>SG DO REGULER</span> V2</div>
+                    <p class="features-header">• STOK AVAILABLE : 46 / 75<br>- PRICE VPN :</p>
+                    <ul class="features">
+                        <li>Rp 5.000 / 15 Hari</li>
+                        <li>Rp 10.000 / 30 Hari</li>
+                        <li>Rp 15.000 / 60 Hari</li>
+                        <li>Rp 25.000 / 90 Hari</li>
+                        <li>Rp 115.000 / 365 Hari</li>
+                    </ul>
+                </div>
                 <a href="https://t.me/SaputraTech" class="buy-button">Beli Sekarang</a>
             </div>
             
-        <div class="pricing-grid">
             <div class="pricing-card">
-                <h3>XRAY Only</h3>
-                <div class="price">ID BIZNET LITE<span> V3</span></div>
-                <ul class="features">
-                   <h3>• STOK AVAILABLE : 09 / 55 
-                    <br>- PRICE VPN :</h3>
-                    <li>Rp 5.000 / 15 Day</li>
-                    <li>Rp 10.000 / 30 Day</li>
-                    <li>Rp 15.000 / 60 Day</li>
-                    <li>Rp 25.000 / 90 Day</li>
-                    <li>Rp 115.000 / 365 Day</li>
-                </ul>
+                <div class="card-content">
+                    <h3>XRAY Only</h3>
+                    <div class="price"><span>ID BIZNET LITE</span> V3</div>
+                    <p class="features-header">• STOK AVAILABLE : 09 / 55<br>- PRICE VPN :</p>
+                    <ul class="features">
+                        <li>Rp 5.000 / 15 Hari</li>
+                        <li>Rp 10.000 / 30 Hari</li>
+                        <li>Rp 15.000 / 60 Hari</li>
+                        <li>Rp 25.000 / 90 Hari</li>
+                        <li>Rp 115.000 / 365 Hari</li>
+                    </ul>
+                </div>
                 <a href="https://t.me/SaputraTech" class="buy-button">Beli Sekarang</a>
             </div>
-            
-        <div class="pricing-grid">
+
             <div class="pricing-card">
-                <h3>XRAY Only</h3>
-                <div class="price">ID BIZNET LITE<span> V4</span></div>
-                <ul class="features">
-                   <h3>• STOK AVAILABLE : 12 / 55 
-                    <br>- PRICE VPN :</h3>
-                    <li>Rp 5.000 / 15 Day</li>
-                    <li>Rp 10.000 / 30 Day</li>
-                    <li>Rp 15.000 / 60 Day</li>
-                    <li>Rp 25.000 / 90 Day</li>
-                    <li>Rp 115.000 / 365 Day</li>
-                </ul>
+                <div class="card-content">
+                    <h3>XRAY Only</h3>
+                    <div class="price"><span>ID BIZNET LITE</span> V4</div>
+                    <p class="features-header">• STOK AVAILABLE : 12 / 55<br>- PRICE VPN :</p>
+                    <ul class="features">
+                        <li>Rp 5.000 / 15 Hari</li>
+                        <li>Rp 10.000 / 30 Hari</li>
+                        <li>Rp 15.000 / 60 Hari</li>
+                        <li>Rp 25.000 / 90 Hari</li>
+                        <li>Rp 115.000 / 365 Hari</li>
+                    </ul>
+                </div>
                 <a href="https://t.me/SaputraTech" class="buy-button">Beli Sekarang</a>
             </div>
-        <div class="pricing-grid">
+
             <div class="pricing-card">
-                <h3>XRAY Only</h3>
-                <div class="price">SG DO AMD<span> V5</span></div>
-                <ul class="features">
-                   <h3>• STOK AVAILABLE : 27 / 75 
-                    <br>- PRICE VPN :</h3>
-                    <li>Rp 5.000 / 15 Day</li>
-                    <li>Rp 10.000 / 30 Day</li>
-                    <li>Rp 15.000 / 60 Day</li>
-                    <li>Rp 25.000 / 90 Day</li>
-                    <li>Rp 115.000 / 365 Day</li>
-                </ul>
+                <div class="card-content">
+                    <h3>XRAY Only</h3>
+                    <div class="price"><span>SG DO AMD</span> V5</div>
+                    <p class="features-header">• STOK AVAILABLE : 27 / 75<br>- PRICE VPN :</p>
+                    <ul class="features">
+                        <li>Rp 5.000 / 15 Hari</li>
+                        <li>Rp 10.000 / 30 Hari</li>
+                        <li>Rp 15.000 / 60 Hari</li>
+                        <li>Rp 25.000 / 90 Hari</li>
+                        <li>Rp 115.000 / 365 Hari</li>
+                    </ul>
+                </div>
                 <a href="https://t.me/SaputraTech" class="buy-button">Beli Sekarang</a>
             </div>
-        <div class="pricing-grid">
+
             <div class="pricing-card">
-                <h3>XRAY Only</h3>
-                <div class="price">ID HERZA OLD<span> V6</span></div>
-                <ul class="features">
-                    <h3>• STOK AVAILABLE : 05 / 30 
-                    <br>- PRICE VPN :</h3>
-                    <li>Rp 5.000 / 15 Day</li>
-                    <li>Rp 10.000 / 30 Day</li>
-                    <li>Rp 15.000 / 60 Day</li>
-                    <li>Rp 25.000 / 90 Day</li>
-                    <li>Rp 115.000 / 365 Day</li>
-                </ul>
+                <div class="card-content">
+                    <h3>XRAY Only</h3>
+                    <div class="price"><span>ID HERZA OLD</span> V6</div>
+                    <p class="features-header">• STOK AVAILABLE : 05 / 30<br>- PRICE VPN :</p>
+                    <ul class="features">
+                        <li>Rp 5.000 / 15 Hari</li>
+                        <li>Rp 10.000 / 30 Hari</li>
+                        <li>Rp 15.000 / 60 Hari</li>
+                        <li>Rp 25.000 / 90 Hari</li>
+                        <li>Rp 115.000 / 365 Hari</li>
+                    </ul>
+                </div>
                 <a href="https://t.me/SaputraTech" class="buy-button">Beli Sekarang</a>
             </div>
-            
-        <div class="pricing-grid">
+
             <div class="pricing-card">
-                <div class="price">KEUNGGULAN</div>
-                <ul class="features">
-                    <li>Support 24/7</li>
-                    <li>Full Garansi</li>
-                    <li>Kecepatan Up To 25 Mbps</li>
-                    <li>Server Indonesia & Singapore</li>
-                    <li>Bisa Perpanjang Kapan Saja</li>
-                    <li>Support VC & Game Online (Bonus)</li>
-                    <li>Support Application Skarti VPN Pro</li>
-                </ul>
-                
+                <div class="card-content">
+                    <div class="price">KEUNGGULAN</div>
+                    <ul class="features">
+                        <li>Support 24/7</li>
+                        <li>Full Garansi</li>
+                        <li>Kecepatan Up To 25 Mbps</li>
+                        <li>Server Indonesia & Singapore</li>
+                        <li>Bisa Perpanjang Kapan Saja</li>
+                        <li>Support VC & Game Online (Bonus)</li>
+                        <li>Support Aplikasi Skarti VPN Pro</li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </div>
+
+        </div> </div>
 </body>
 </html>
