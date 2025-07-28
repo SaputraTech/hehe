@@ -2,22 +2,124 @@
 <html lang="id">
 <head>
     <meta charset="UTF-8">
-    <title>Halaman Terlindungi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uptime Server Status</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <script>
-        try {
-            const encodedData = "PCFET0NUWVBFIGh0bWw+CjxodG1sIGxhbmc9ImlkIj4KPGhlYWQ+CiAgICA8bWV0YSBjaGFyc2V0PSJVVEYtOCI+CiAgICA8bWV0YSBuYW1lPSJ2aWV3cG9ydCIgY29udGVudD0id2lkdGg9ZGV2aWNlLXdpZHRoLCBpbml0aWFsLXNjYWxlPTEuMCI+CiAgICA8dGl0bGU+VXB0aW1lIFNlcnZlciBTdGF0dXM8L3RpdGxlPgogICAgPGxpbmsgcmVsPSJzdHlsZXNoZWV0IiBocmVmPSJzdHlsZS5jc3MiPgo8L2hlYWQ+Cjxib2R5PgogICAgPGRpdiBjbGFzcz0iY29udGFpbmVyIj4KICAgICAgICA8aGVhZGVyPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJoZWFkZXItdGl0bGUiPgogICAgICAgICAgICAgICAgPGltZyBzcmM9Imljb25zL2ljb24ucG5nIiBhbHQ9IkxvZ28iIGNsYXNzPSJsb2dvIj4KICAgICAgICAgICAgICAgIDxoMT5VcHRpbWUgU2VydmVyIFNrYXJ0aTwvaDE+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJzdGF0dXMtb3ZlcmFsbCI+CiAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0iaW5kaWNhdG9yIj48L3NwYW4+IFNlbXVhIFNpc3RlbSBCZXJmdW5nc2kKICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgPGg0PgogICAgICAgICAgICA8c3Bhbj7wn6SWIFdlYiBpbmkgYmVyZnVuZ3NpIHVudHVrIG1lbWFudGF1IHNlcnZlci48L3NwYW4+CiAgICAgICAgICAgIDxicj4KICAgICAgICAgICAgPHNwYW4+4pyU77iPIEdhcmlzIGhpamF1IG1lbmFuZGFrYW4gc2VydmVyIE5vcm1hbC48L3NwYW4+CiAgICAgICAgICAgIDxicj4KICAgICAgICAgICAgPHNwYW4+4p2MIEdhcmlzIG1lcmFoIG1lbmFuZGFrYW4gc2VydmVyICBkb3duIDwvc3Bhbj4KICAgICAgICAgICAgPGJyPgogICAgICAgICAgICA8YnI+CiAgICAgICAgICAgIDxzcGFuPuKalu+4jyBTZWJhaWsgYmFpayBueWEgYW1hbCBhZGFsYWggU2hvbGF0Ljwvc3Bhbj4KICAgICAgICAgICAgPGJyPgogICAgICAgICAgICA8c3Bhbj7wn5G+IEh1YnVuZyBhZG1pbiBqaWthIHNlcnZlciBiZXJtYXNhbGFoLjwvc3Bhbj4KICAgICAgICAgICAgPGJyPgogICAgICAgICAgICA8c3Bhbj7wn6qqIE93bmVyIDogQFNhcHV0cmFUZWNoPC9zcGFuPgogICAgICAgIDwvaDQ+CiAgICAgICAgPC9oZWFkZXI+CgogICAgICAgIDxtYWluPgogICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2ZXItY2F0ZWdvcnkiPgogICAgICAgICAgICAgICAgPGgyPuKcryBTU0ggV1MgLyBTU0wgLyBVRFA8L2gyPgogICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VydmVyLWl0ZW0iPgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZlci1pbmZvIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImZsYWciPvCfh67wn4epPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmFtZSI+SUQgVEVOQ0VOVCBWMTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2ZXItc3RhdHVzIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InVwdGltZS1wZXJjZW50Ij45OS45MyU8L3NwYW4+CiAgICAgICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InVwdGltZS1iYXItY29udGFpbmVyIj4KICAgICAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibGFzdC1jaGVjayI+Tm93PC9zcGFuPgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VydmVyLWl0ZW0iPgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZlci1pbmZvIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImZsYWciPvCfh7jwn4esPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmFtZSI+U0cgRElHSVRBTCBPQ0VBTiBWMjwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2ZXItc3RhdHVzIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InVwdGltZS1wZXJjZW50Ij4xMDAlPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJ1cHRpbWUtYmFyLWNvbnRhaW5lciI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibGFzdC1jaGVjayI+Tm93PC9zcGFuPgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgoKICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VydmVyLWNhdGVnb3J5Ij4KICAgICAgICAgICAgICAgIDxoMj7inK8gWFJBWSAvIFZNRVNTIC8gVkxFU1MgLyBUUk9KQU48L2gyPgogICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZlci1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2ZXItaW5mbyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJmbGFnIj7wn4eu8J+HqTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im5hbWUiPklEIEJJWk5FVCBMSVRFIFYzPC9zcGFuPgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZlci1zdGF0dXMiPgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0idXB0aW1lLXBlcmNlbnQiPjk5LjEzJTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0idXB0aW1lLWJhci1jb250YWluZXIiPgogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Imxhc3QtY2hlY2siPk5vdzwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZlci1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2ZXItaW5mbyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJmbGFnIj7wn4eu8J+HqTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im5hbWUiPklEIEJJWk5FVCBMSVRFIFY0PC9zcGFuPgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZlci1zdGF0dXMiPgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0idXB0aW1lLXBlcmNlbnQiPjk5LjQxJTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgPGRpdiBjbGFzcz0idXB0aW1lLWJhci1jb250YWluZXIiPgogICAgICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Imxhc3QtY2hlY2siPk5vdzwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgPGRpdiBjbGFzcz0ic2VydmVyLWl0ZW0iPgogICAgICAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZlci1pbmZvIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9ImZsYWciPvCfh7jwn4esPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibmFtZSI+U0cgVEVOQ0VOVCBWNTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2ZXItc3RhdHVzIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InVwdGltZS1wZXJjZW50Ij4xMDAlPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJ1cHRpbWUtYmFyLWNvbnRhaW5lciI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibGFzdC1jaGVjayI+Tm93PC9zcGFuPgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgICAgIDxkaXYgY2xhc3M9InNlcnZlci1pdGVtIj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2ZXItaW5mbyI+CiAgICAgICAgICAgICAgICAgICAgICAgIDxzcGFuIGNsYXNzPSJmbGFnIj7wn4eu8J+HqTwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9Im5hbWUiPklEIEhFUlpBIE9MRCBWNjwvc3Bhbj4KICAgICAgICAgICAgICAgICAgICA8L2Rpdj4KICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJzZXJ2ZXItc3RhdHVzIj4KICAgICAgICAgICAgICAgICAgICAgICAgPHNwYW4gY2xhc3M9InVwdGltZS1wZXJjZW50Ij4xMDAlPC9zcGFuPgogICAgICAgICAgICAgICAgICAgICAgICA8ZGl2IGNsYXNzPSJ1cHRpbWUtYmFyLWNvbnRhaW5lciI+CiAgICAgICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgICAgICAgICA8c3BhbiBjbGFzcz0ibGFzdC1jaGVjayI+Tm93PC9zcGFuPgogICAgICAgICAgICAgICAgICAgIDwvZGl2PgogICAgICAgICAgICAgICAgPC9kaXY+CiAgICAgICAgICAgIDwvZGl2PgogICAgICAgIDwvbWFpbj4KCiAgICAgICAgPGZvb3Rlcj4KICAgICAgICAgICAgPGI+Q29weXJpZ2h0ICZjb3B5OyAyMDI1IFNrYXJ0aSBWUE4gT2ZmaWNpYWw8L2I+CiAgICAgICAgPGJyPjxicj4KICAgICAgICAgICAgVGVyYWtoaXIgRGlwZXJiYXJ1aTogPHNwYW4gaWQ9Imxhc3QtdXBkYXRlZC10aW1lIj48L3NwYW4+CjwvZm9vdGVyPgogICAgPC9kaXY+CiAgICA8c2NyaXB0IHNyYz0ic2NyaXB0LmpzIj48L3NjcmlwdD4KPC9ib2R5Pgo8L2h0bWw+";
-            const decodedHtml = atob(encodedData); // atob() adalah fungsi JS untuk decode Base64
-            document.write(decodedHtml);
-        } catch (e) {
-            document.body.innerHTML = "<h1>Gagal mendekode halaman.</h1><p>Pastikan JavaScript diaktifkan.</p>";
-            console.error("Gagal mendekode Base64:", e);
-        }
-    </script>
-    <noscript>
-        <h1>JavaScript Diperlukan</h1>
-        <p>Untuk melihat halaman ini, silakan aktifkan JavaScript di browser Anda.</p>
-    </noscript>
+    <div class="container">
+        <header>
+            <div class="header-title">
+                <img src="icons/icon.png" alt="Logo" class="logo">
+                <h1>Uptime Server Skarti</h1>
+            </div>
+            <div class="status-overall">
+                <span class="indicator"></span> Semua Sistem Berfungsi
+            </div>
+        <h4>
+            <span>🤖 Web ini berfungsi untuk memantau server.</span>
+            <br>
+            <span>✔️ Garis hijau menandakan server Normal.</span>
+            <br>
+            <span>❌ Garis merah menandakan server  down </span>
+            <br>
+            <br>
+            <span>⚖️ Sebaik baik nya amal adalah Sholat.</span>
+            <br>
+            <span>👾 Hubung admin jika server bermasalah.</span>
+            <br>
+            <span>🪪 Owner : @SaputraTech</span>
+        </h4>
+        </header>
+
+        <main>
+            <div class="server-category">
+                <h2>✯ SSH WS / SSL / UDP</h2>
+                <div class="server-item">
+                    <div class="server-info">
+                        <span class="flag">🇮🇩</span>
+                        <span class="name">ID TENCENT V1</span>
+                    </div>
+                    <div class="server-status">
+                        <span class="uptime-percent">99.93%</span>
+                        <div class="uptime-bar-container">
+                            </div>
+                        <span class="last-check">Now</span>
+                    </div>
+                </div>
+                 <div class="server-item">
+                    <div class="server-info">
+                        <span class="flag">🇸🇬</span>
+                        <span class="name">SG DIGITAL OCEAN V2</span>
+                    </div>
+                    <div class="server-status">
+                        <span class="uptime-percent">100%</span>
+                        <div class="uptime-bar-container">
+                        </div>
+                        <span class="last-check">Now</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="server-category">
+                <h2>✯ XRAY / VMESS / VLESS / TROJAN</h2>
+                 <div class="server-item">
+                    <div class="server-info">
+                        <span class="flag">🇮🇩</span>
+                        <span class="name">ID BIZNET LITE V3</span>
+                    </div>
+                    <div class="server-status">
+                        <span class="uptime-percent">99.13%</span>
+                        <div class="uptime-bar-container">
+                        </div>
+                        <span class="last-check">Now</span>
+                    </div>
+                </div>
+           <div class="server-item">
+                    <div class="server-info">
+                        <span class="flag">🇮🇩</span>
+                        <span class="name">ID BIZNET LITE V4</span>
+                    </div>
+                    <div class="server-status">
+                        <span class="uptime-percent">99.41%</span>
+                        <div class="uptime-bar-container">
+                        </div>
+                        <span class="last-check">Now</span>
+                    </div>
+                </div>
+             <div class="server-item">
+                    <div class="server-info">
+                        <span class="flag">🇸🇬</span>
+                        <span class="name">SG TENCENT V5</span>
+                    </div>
+                    <div class="server-status">
+                        <span class="uptime-percent">100%</span>
+                        <div class="uptime-bar-container">
+                        </div>
+                        <span class="last-check">Now</span>
+                    </div>
+                </div>
+               <div class="server-item">
+                    <div class="server-info">
+                        <span class="flag">🇮🇩</span>
+                        <span class="name">ID HERZA OLD V6</span>
+                    </div>
+                    <div class="server-status">
+                        <span class="uptime-percent">100%</span>
+                        <div class="uptime-bar-container">
+                        </div>
+                        <span class="last-check">Now</span>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+        <footer>
+            <b>Copyright &copy; 2025 Skarti VPN Official</b>
+        <br><br>
+            Terakhir Diperbarui: <span id="last-updated-time"></span>
+</footer>
+    </div>
+    <script src="script.js"></script>
 </body>
 </html>
